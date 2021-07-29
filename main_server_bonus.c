@@ -1,6 +1,6 @@
 #include "utils.h"
 
-static void	writer(int counter, int symbol, int i)
+static void	writer(int symbol)
 {
 	if (symbol != 0)
 		write(1, &symbol, 1);
@@ -27,7 +27,7 @@ static void	par_hendler(int signum, struct __siginfo *act, void *smth)
 		counter /= 2, i++;
 	if (i == 8)
 	{
-		writer(counter, symbol, i);
+		writer(symbol);
 		counter = 128;
 		symbol = 0;
 		i = 0;

@@ -39,8 +39,7 @@ int	main(int argc, char *argv[])
 {
 	int		pid;
 	char	*get_str;
-	struct sigaction	act;
-	
+
 	signal(SIGUSR1, mess);
 	if (argc < 3)
 	{

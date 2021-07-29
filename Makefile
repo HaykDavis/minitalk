@@ -20,21 +20,21 @@ FLAGS = -Wall -Wextra -Werror
 all: $(NAME) $(NAME_C) 
 
 $(NAME) : $(SRCS) $(SRCS_S)
-	@$(CC) $(SRCS) $(SRCS_S) -o $(NAME)
+	@$(CC) $(FLAGS) $(SRCS) $(SRCS_S) -o $(NAME)
 	@printf "server was build ✅\n"
 
 $(NAME_C) : $(SRCS_C) $(SRCS_S)
-	@$(CC) $(SRCS_C) $(SRCS_S) -o $(NAME_C)
+	@$(CC) $(FLAGS) $(SRCS_C) $(SRCS_S) -o $(NAME_C)
 	@printf "client was build ✅\n"
 
 bonus:	$(NAME_B) $(NAME_CB)
 
 $(NAME_B) : $(SRCS_B) $(SRCS_S)
-	@$(CC) $(SRCS_B) $(SRCS_S) -o $(NAME_B)
+	@$(CC) $(FLAGS) $(SRCS_B) $(SRCS_S) -o $(NAME_B)
 	@printf "server_bonus was build ✅\n"
 
 $(NAME_CB) : $(SRCS_CB) $(SRCS_S)
-	@$(CC) $(SRCS_CB) $(SRCS_S) -o $(NAME_CB)
+	@$(CC) $(FLAGS) $(SRCS_CB) $(SRCS_S) -o $(NAME_CB)
 	@printf "client_bonus was build ✅\n"
 
 %.o: %.c	$(HEADER)
